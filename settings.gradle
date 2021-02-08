@@ -1,0 +1,5 @@
+include ':home'
+include ':dashboard'
+include ':configuracao'
+include ':app'
+rootProject.name = "treino"

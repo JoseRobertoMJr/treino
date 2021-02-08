@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/configuracao_nav_graph"
+    app:startDestination="@+id/configuracaoFragment">
+
+    <fragment
+        android:id="@+id/configuracaoFragment"
+        android:name="com.example.configuracao.presentation.ConfiguracaoFragment"
+        android:label="@string/title_configuracao"
+        tools:layout="@layout/fragment_configuracao">
+
+        <argument
+            android:name="texto"
+            app:argType="string"
+            android:defaultValue="" />
+        <deepLink
+            android:id="@+id/configuracao_nav_graph"
+            app:uri="myapp://configuracaoFragment/{texto}" />
+
+        <action android:id="@+id/configurationToTelaDois"
+            app:destination="@+id/TelaDoisFragment">
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/TelaDoisFragment"
+        android:name="com.example.configuracao.presentation.TelasDoisFragment"
+        android:label="@string/title_telaDois"
+        tools:layout="@layout/fragment_telas_dois">
+
+        <argument
+            android:name="texto"
+            app:argType="string"
+            android:defaultValue="" />
+
+    </fragment>
+
+
+</navigation>
