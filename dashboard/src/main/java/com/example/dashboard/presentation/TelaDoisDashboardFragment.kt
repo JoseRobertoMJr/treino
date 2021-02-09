@@ -23,7 +23,7 @@ class TelaDoisDashboardFragment : Fragment() {
 
         val textView =view.findViewById<TextView>(R.id.text_tela_dois)
 
-        textView.text = args.texto
+        textView.text = args.textoDois
 
         return view
     }

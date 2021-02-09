@@ -14,7 +14,7 @@
 
         <action
             android:id="@+id/dashboardToTelaDois"
-            app:destination="@+id/TelaDoisDashboardFragment"></action>
+            app:destination="@+id/TelaDoisDashboardFragment" />
     </fragment>
 
     <fragment
@@ -24,8 +24,9 @@
         tools:layout="@layout/fragment_tela_dois_dashboard">
 
         <argument
-            android:name="texto"
+            android:name="textoDois"
             android:defaultValue=""
             app:argType="string" />
     </fragment>
+
 </navigation>

@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -18,8 +19,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
-    buildFeatures{
-        viewBinding = true
+    buildFeatures {
+        viewBinding true
     }
     buildTypes {
         release {

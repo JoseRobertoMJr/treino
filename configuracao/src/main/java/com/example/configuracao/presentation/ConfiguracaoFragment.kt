@@ -31,7 +31,7 @@ class ConfiguracaoFragment : Fragment() {
 
         val controller = NavHostFragment.findNavController(this)
 
-        val action = ConfiguracaoFragmentDirections.configurationToTelaDois()
+        val action = ConfiguracaoFragmentDirections.configurationToTelaDois().setTexto("texto Configuracao")
         btn.setOnClickListener {
             controller.navigate(action)
         }
