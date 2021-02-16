@@ -1,18 +1,15 @@
-package com.example.dashboard.presentation
+package com.example.dashboard.presentation.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatImageButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dashboard.R
-import com.example.dashboard.presedntation.Fruta
+import com.example.dashboard.domain.model.FrutaEntity
 import kotlinx.android.synthetic.main.fruta_item.view.*
 
-class FrutasAdpter(val frutaList: ArrayList<Fruta>, private val listener: OnItemClickListner) :
+class FrutasAdpter(val frutaList: ArrayList<FrutaEntity>, private val listener: OnItemClickListner) :
     RecyclerView.Adapter<FrutasAdpter.FrutaViewHolder>() {
 
     private lateinit var view: View
@@ -30,7 +27,7 @@ class FrutasAdpter(val frutaList: ArrayList<Fruta>, private val listener: OnItem
             }
         }
 
-        fun bind(fruta: Fruta) {
+        fun bind(fruta: FrutaEntity) {
             itemView.txt_fruta_nome.text = fruta.nome
         }
     }
